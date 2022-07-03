@@ -49,7 +49,7 @@
   - `float`
   - `double`
 - Non-primitive data types
-  - String (pending)
+  - String
 - Types of variables
   - Local variable
   - Instance variable
