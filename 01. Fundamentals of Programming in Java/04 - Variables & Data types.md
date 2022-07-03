@@ -150,7 +150,7 @@ String name = "Parth Maru";
 System.out.print(name); // Parth Maru
 ```
 
-- There is a difference between `name` and `"name".
+- There is a difference between `name` and `"name"`.
 
 ```java
 System.out.print(name); // Parth Maru
