@@ -28,6 +28,7 @@ int age = 18;
 
 - Data types which are known to Java.
 - Building blocks for data manipulation.
+- Values of variables created with primitive data types are stored in stack memory.
 
 ### NOTE:
 
@@ -122,6 +123,51 @@ int age = 18;
   ```java
   double d = 10.876334f;
   ```
+
+## Non-primitive data types
+
+- Non-primitive data types are stored in heap memory.
+- Only the references are stored in stack memory.
+
+### NOTE:
+
+- For now just understand `String` in terms of primitive data type and don't think much about its implementation and storage.
+- Once you understand the concepts of objects and references, things will be much clear.
+- Also, other non-primitive data types such as classes, interfaces, arrays requires knowledge of OOP (somewhat).
+
+### `String`
+
+- `String` is used to store sequence of characters.
+- Use `""` for `String`.
+- Any character sequences or values between `""` is considered as `String`.
+
+```java
+Syntax:
+String variable_name = "value";
+
+Example:
+String name = "Parth Maru";
+System.out.print(name); // Parth Maru
+```
+
+- There is a difference between `name` and `"name".
+
+```java
+System.out.print(name); // Parth Maru
+System.out.print("name"); // name
+```
+
+- Even numbers can be stored as `String` but the mathematical rules won't apply to it.
+
+```java
+String number = "123";
+String anotherNumber = "456";
+System.out.println(number + anotherNumber); // 123456
+```
+
+- In the above example, the `+` operator concatenates or joins both the strings.
+- If it would have been an `int`, it would have done arithmetic calculation and the output would be `579`.
+- When you use `+` with strings, it joins or concenates them.
 
 # Types of variables
 
