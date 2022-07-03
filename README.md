@@ -101,3 +101,38 @@
   - Static method
   - Instance method
   - Abstract method
+
+# Object Oriented Programming
+
+## Introduction to OOP
+
+- Overview of OOP
+  - Object
+  - Class
+  - Inheritance
+  - Polymorphism
+  - Abstraction
+  - Encapsulation
+  - Coupling
+  - Cohesion
+  - Association
+  - Aggregation
+  - Composition
+- OOP vs procedural language
+
+## Classes and Objects
+
+- Class
+  - Naming convention
+  - Syntax
+- Object
+  - `new` keyword
+  - Syntax
+  - `main()` within the class
+  - `main()` outside the class
+  - Ways to initialize object
+  - Memory allocation for object
+  - Ways of creating object
+  - Creating multiple objects
+  - Anonymous Objects
+- Difference between Object and Class
