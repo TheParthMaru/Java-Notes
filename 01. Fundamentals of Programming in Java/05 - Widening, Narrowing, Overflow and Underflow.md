@@ -1,4 +1,4 @@
-# Widening or typeconversion
+# Widening or type-conversion
 
 - Smaller data type is implicitly converted to larger data type.
 
@@ -9,7 +9,7 @@ System.out.println(a); // 10
 System.out.println(f); // 10.0
 ```
 
-# Narrowing or Typecasting
+# Narrowing or type-casting
 
 - Converting larger data type to smaller data type.
 - May result in loss of data.
