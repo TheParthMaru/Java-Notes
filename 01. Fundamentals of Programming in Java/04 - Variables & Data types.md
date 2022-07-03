@@ -34,7 +34,7 @@ int age = 18;
 - Formula to calculate the range of any data type is as follows:
   **-(2<sup>n - 1</sup>) to (2<sup>n-1</sup>) - 1**
 
-## `boolean`
+### `boolean`
 
 - Used to store either `true` or `false`.
 - **Size:** 1 bit but not precisely.
@@ -45,7 +45,7 @@ int age = 18;
   boolean isEligible = true;
   ```
 
-## `char`
+### `char`
 
 - Used to store 16-bit unicode characters.
 - **Size:** 2 bytes
@@ -57,7 +57,7 @@ int age = 18;
   char response = 'Y';
   ```
 
-## `byte`
+### `byte`
 
 - 8-bit signed two's complement integer.
 - **Size:** 1 byte or 8-bit
@@ -68,7 +68,7 @@ int age = 18;
   byte a = 10;
   ```
 
-## `short`
+### `short`
 
 - 16-bit signed two's complement integer.
 - **Size:** 2 bytes
@@ -79,7 +79,7 @@ int age = 18;
   short s = 12000;
   ```
 
-## `int`
+### `int`
 
 - 32-bit signed two's complement integer.
 - **Size:** 4 bytes
@@ -90,7 +90,7 @@ int age = 18;
   int s = -10000;
   ```
 
-## `long`
+### `long`
 
 - 64-bit signed two's complement integer.
 - **Size:** 8 bytes
@@ -101,7 +101,7 @@ int age = 18;
   long b = -200000L;
   ```
 
-## `float`
+### `float`
 
 - Single-precision 32-bit IEEE 754 floating point.
 - **Size:** 4 bytes
@@ -112,7 +112,7 @@ int age = 18;
   float f = 10.87f;
   ```
 
-## `double`
+### `double`
 
 - Double-precision 64-bit IEEE 754 floating point.
 - **Size:** 8 bytes
