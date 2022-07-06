@@ -136,3 +136,63 @@
   - Creating multiple objects
   - Anonymous Objects
 - Difference between Object and Class
+
+## Constructors
+
+- Constructors in Java
+- Rules for creating a constructor
+- Types of constructors
+  - Default constructor
+  - No-argument constructor
+  - Paramaterized constructor
+- Constructor vs Method
+- Constructor overloading
+- Java copy constructor
+  - Ways to copy values of object
+    - Manual assignment
+    - Using constructor
+- Interview questions
+
+## Packages
+
+- Packages in Java
+- Accessing packages
+  - `import package.*;`
+  - `import package.classname;`
+  - Using fully qualified name
+- Subpackage
+
+## Access modifier
+
+- `private`
+- `default`
+- `protected`
+- `public`
+- Access modifier table
+
+## `this` keyword
+
+- Proving `this` keyword
+- Usage of `this` keyword
+  - Understanding the problem without `this` keyword
+  - Solution of the above problem
+
+## `this()` call
+
+- `this()`
+
+## `static` keyword
+
+- Static variables
+  - Problem without static variable
+  - Solution to the above problem
+  - Counter program without static variable
+  - Counter program with static variable
+- Static method
+- Static block
+- Interview questions
+
+## Instance variables and methods
+
+- Instance variables
+- Instance methods
