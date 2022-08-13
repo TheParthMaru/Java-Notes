@@ -167,7 +167,7 @@ System.out.println(number + anotherNumber); // 123456
 
 - In the above example, the `+` operator concatenates or joins both the strings.
 - If it would have been an `int`, it would have done arithmetic calculation and the output would be `579`.
-- When you use `+` with strings, it joins or concenates them.
+- When you use `+` with strings, it joins or concatenates them.
 
 # Types of variables
 
