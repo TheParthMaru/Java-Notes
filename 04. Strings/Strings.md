@@ -78,3 +78,38 @@ String s = new String("Parth");
 | `String toUpperCase(Locale l)`                                                          | returns a string in uppercase using specified locale             |
 | `String trim()`                                                                         | removes beginning and ending spaces of this string               |
 | `static String valueOf(int value)`                                                      | converts given type into string. It is an overloaded method.     |
+
+## Immutable strings
+
+- String objects are immutable which means unchangeable or unmodifiable.
+- Once a string object is created its data or state can't be changed but a new string object is created.
+
+```java
+String s = "Parth";
+s.concat(" Maru"); // concat() appends the string at the end
+System.out.println(s); // Parth, because strings are immutable
+```
+
+![picture 1](../images/a226c26e3482e9971fccc25354e63b857a6f4b4ab5568f84a9222427e313ccb9.png)
+
+- Here a new string object "Parth Maru" is created.
+- s is still pointing to "Parth" as we haven't explicitly assigned it s.
+
+```java
+String s = "Parth";
+s = s.concat(" Maru");
+System.out.println(s); // Parth Maru
+```
+
+## Interview questions
+
+1. Why string objects are immutable?
+
+- Consider there are 5 reference variables all refering to object "Parth".
+- If any one reference variable changes the value of the object, it will be affected by all the reference variables.
+- That's the reason strings were made immutable.
+
+2. Why String class is final?
+
+- So that no one can override its methods.
+- Hence it can provide the same features to the new String objects as well as the old ones.
