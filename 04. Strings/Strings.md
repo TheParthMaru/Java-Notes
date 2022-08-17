@@ -113,3 +113,143 @@ System.out.println(s); // Parth Maru
 
 - So that no one can override its methods.
 - Hence it can provide the same features to the new String objects as well as the old ones.
+
+## String comparison
+
+- Three ways:
+
+1. `equals()` method
+
+- Method of string class.
+- Compares two strings and returns boolean result.
+
+```java
+String s1 = "abc";
+String s2 = "ABC";
+String s3 = new String("abc");
+
+System.out.println(s1.equals(s2)); // false
+System.out.println(s1.equals(s3)); // true
+```
+
+- Another method is `equalsIgnoreCase()` which compares two strings and ignores the case.
+
+```java
+String s1 = "abc";
+String s2 = "ABC";
+
+System.out.println(s1.equalsIgnoreCase(s2)); // true
+```
+
+2. By using `==` operator
+
+- `==` compares reference, not values.
+
+```java
+String s1 = "abc";
+String s2 = "abc";
+String s3 = new String("abc");
+
+System.out.println(s1 == s2); // true
+System.out.println(s1 == s3); // false, because s3 reference to string in heap and not string pool
+```
+
+3. By using `compareTo()` method
+
+- Compares values lexicographically and returns integer value that describes if the first string is less than, equal to or greater than second string.
+- Consider two string s1 and s2:
+  - If s1 == s2, method returns 0.
+  - If s1 > s2, method returns positive value.
+  - If s1 < s2, method returns negative value.
+
+```java
+String s1 = "Parth";
+String s2 = "Parth";
+String s3 = new String("Maru");
+
+System.out.println(s1.compareTo(s2)); // 0
+System.out.println(s1.compareTo(s3)); // 3
+System.out.println(s3.compareTo(s1)); // -3
+```
+
+# StringBuffer class
+
+- Used to create mutable string objects.
+- Java StringBuffer class is thread-safe i.e. multiple threads cannot access it simultaneously.
+- So it is safe and will result in an order
+
+## Important constructors of StringBuffer class
+
+- `StringBuffer()`: Creates an empty string buffer with the initial capacity as 16.
+- `StringBuffer(String str)`: Creates a string buffer with the specified string.
+- `StringBuffer(int capacity)`: Creates an empty String buffer with the specified capacity as length.
+
+## Important methods of StringBuffer class
+
+1. `append()`
+
+- Concatenates the given argument at the end of the string.
+
+```java
+StringBuffer sb = new StringBuffer("parth");
+sb.append(" maru");
+System.out.println(sb); // parth maru
+```
+
+2. `insert()`
+
+- Insert string at a particular position.
+
+```java
+StringBuffer sb = new StringBuffer("parth");
+sb.insert(0, "hello ");
+System.out.println(sb); // hello parth
+```
+
+3. `replace()`
+
+- Replaces the given string from a specified index to specified index.
+
+```java
+StringBuffer sb = new StringBuffer("abcd");
+sb.replace(1, 3, "BC");
+System.out.println(sb); // aBCd
+```
+
+4. `delete()`
+
+- Deletes the string from the specified index to a specified index.
+
+```java
+StringBuffer sb = new StringBuffer("abcd");
+sb.delete(1, 4);
+System.out.println(sb); // a
+```
+
+5. `reverse()`
+
+- Reverses the current string.
+
+```java
+StringBuffer sb = new StringBuffer("abcd");
+sb.reverse();
+System.out.println(sb); // dcba
+```
+
+6. `capacity()`
+
+- Returns the current capacity of the buffer.
+- Default capacity is 16.
+- If the number of character increases from its current capacity, it increases the capacity by (old capacity \* 2) + 2.
+- For eg, old capacity was 16, so the new capacity will be (16 \* 2) + 2 = 34.
+
+```java
+StringBuffer sb = new StringBuffer();
+System.out.println(sb.capacity()); // 16
+
+sb.append("parth");
+System.out.println(sb.capacity()); // 16
+
+sb.append("Java is my favorite language");
+System.out.println(sb.capacity()); // 34
+```
