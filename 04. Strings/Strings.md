@@ -253,3 +253,32 @@ System.out.println(sb.capacity()); // 16
 sb.append("Java is my favorite language");
 System.out.println(sb.capacity()); // 34
 ```
+
+# StringBuilder class
+
+- Used to create mutable strings.
+- Same as StringBuffer, but it is non-synchronized.
+
+## Important constructors of StringBuilder class
+
+- `StringBuilder()` - Creates an empty StringBuilder with the initial capacity of 16.
+- `StringBuilder(String str)` - Creates a StringBuilder with the specified string.
+- `StringBuilder(int length)` - Creates an empty StringBuilder with the specified capacity as length.
+
+## Important methods of StringBuilder class
+
+1. `append()`
+
+- Same as StringBuffer class.
+
+```java
+StringBuilder sb = new StringBuilder("parth");
+sb = sb.append(" maru");
+System.out.println(sb); // parth maru
+```
+
+2. `insert()`
+3. `replace()`
+4. `delete()`
+5. `reverse()`
+6. `capacity()`
