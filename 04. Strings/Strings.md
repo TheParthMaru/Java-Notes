@@ -282,3 +282,102 @@ System.out.println(sb); // parth maru
 4. `delete()`
 5. `reverse()`
 6. `capacity()`
+
+- All the above methods work same as StringBuffer class.
+
+# String vs StringBuffer
+
+| String                                                                                                            | StringBuffer                                                 |
+| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| Immutable                                                                                                         | Mutable                                                      |
+| Slow and consumes more memory when we concatenate too many strings because every time it creates new instance.    | Fast and consumes less memory when we concatenate t strings. |
+| Overrides the equals() method of Object class. So you can compare the contents of two strings by equals() method. | Doesn't override the equals() method of Object class.        |
+| Uses String constant pool.                                                                                        | Uses heap memory.                                            |
+
+## Performance test of String and StringBuilder
+
+1. Concatenation test
+
+```java
+public class Main {
+
+	public static void main(String args[]) {
+		long startTime = System.currentTimeMillis();
+
+		concatWithString();
+		System.out.println("concatWithString() -> " + (System.currentTimeMillis() - startTime) + "ms");
+
+		startTime = System.currentTimeMillis();
+		concatWithStringBuffer();
+		System.out.println("concatWithStringBuffer() -> " + (System.currentTimeMillis() - startTime) + "ms");
+	}
+
+	public static String concatWithString() {
+		String s = "parth";
+
+		for(int i = 0; i < 10000; i++) {
+			s = s + " maru ";
+		}
+		return s;
+	}
+
+	public static String concatWithStringBuffer() {
+		StringBuffer s = new StringBuffer("parth");
+
+		for(int i = 0; i < 1000; i++) {
+			s.append(" maru" );
+		}
+		return s.toString();
+	}
+}
+```
+
+```
+Output:
+concatWithString() -> 146ms
+concatWithStringBuffer() -> 1ms
+```
+
+- This proves that StringBuffer concatenates faster compared to String.
+
+2. Hashcode test
+
+```java
+public class Main {
+
+	public static void main(String args[]) {
+		String str = "parth";
+		System.out.println("String hashcode");
+		System.out.println(str.hashCode());
+
+		str = str + " maru";
+		System.out.println(str.hashCode());
+
+
+		StringBuffer sb = new StringBuffer("parth");
+		System.out.println("StringBuffer hashcode");
+		System.out.println(sb.hashCode());
+
+		sb.append(" maru");
+		System.out.println(sb.hashCode());
+	}
+}
+```
+
+```
+Output:
+String hashcode
+106437333
+-65644222
+StringBuffer hashcode
+1072591677
+```
+
+- This proves that StringBuffer is mutable and String is immutable.
+
+# StringBuffer vs StringBuilder
+
+| StringBuffer                                                                                               | StringBuilder                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Synchronized i.e. thread safe. It means two threads can't call the methods of StringBuffer simultaneously. | Non-synchronized i.e. not thread safe. It means two threads can call the methods of StringBuilder simultaneously. |
+| Less efficient than StringBuilder.                                                                         | More efficient than StringBuffer.                                                                                 |
