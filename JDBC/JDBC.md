@@ -65,7 +65,7 @@
 - Network support is required on client machine.
 - Requires database specific coding to be done in the middle tier which results in costly maintenance of network protocol.
 
-#### 4. Type-4 Driver (Thin Driver)
+### 4. Type-4 Driver (Thin Driver)
 
 - Converts JDBC calls directly into the vendor specific database protocol.
 - Fully written in Java to achieve platform independence.
@@ -78,3 +78,26 @@
 **Disadvantages**
 
 - Drivers are DB specific.
+
+## Connecting to DB
+
+```java
+public class JDBCConnection {
+    public static final String JDBC_POSTGRES_URL = "jdbc:postgresql://localhost:5432/dvdrental";
+	public static final String JDBC_USERNAME = "postgres";
+	public static final String JDBC_PASSWORD = "postgres";
+
+    public static void main(String[] args) {
+		try(Connection connection = DriverManager.getConnection(JDBC_POSTGRES_URL, JDBC_USERNAME, JDBC_PASSWORD);) {
+			if(null == connection) {
+				System.out.println("Failed to connect to DB");
+			} else {
+				System.out.println("DB connection successful");
+			}
+		} catch(SQLException err) {
+			System.out.println("Error to connect to DB");
+			err.printStackTrace();
+		}
+	}
+}
+```
